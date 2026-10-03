@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sat Oct 18 18:49:18 2025
+# Process ID         : 274048
+# Current directory  : /home/filthyfil/release_side_debounce/release_side_debounce.runs/impl_1
+# Command line       : vivado -log debounce.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source debounce.tcl -notrace
+# Log file           : /home/filthyfil/release_side_debounce/release_side_debounce.runs/impl_1/debounce.vdi
+# Journal file       : /home/filthyfil/release_side_debounce/release_side_debounce.runs/impl_1/vivado.jou
+# Running On         : computer
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+# CPU Frequency      : 4299.459 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 50444 MB
+# Swap memory        : 50000 MB
+# Total Virtual      : 100444 MB
+# Available Virtual  : 90704 MB
+#-----------------------------------------------------------
+source debounce.tcl -notrace

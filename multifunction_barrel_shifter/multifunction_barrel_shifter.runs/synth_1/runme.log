@@ -1,0 +1,191 @@
+
+*** Running vivado
+    with args -log testbench.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source testbench.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Thu Oct  2 23:32:06 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source testbench.tcl -notrace
+Command: synth_design -top testbench -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 69401
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1937.887 ; gain = 426.508 ; free physical = 29008 ; free virtual = 85425
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'testbench' [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/testbench.v:23]
+WARNING: [Synth 8-11581] system task call 'stop' not supported [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/testbench.v:46]
+INFO: [Synth 8-6157] synthesizing module 'barrel_shifter' [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:65]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'two_to_one_mux' [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:46]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rotate_right' [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:22]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rotate_right' (0#1) [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'rotate_left' [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:34]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rotate_left' (0#1) [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'two_to_one_mux' (0#1) [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'barrel_shifter' (0#1) [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/barrel_shifter.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'testbench' (0#1) [/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.srcs/sources_1/new/testbench.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2010.855 ; gain = 499.477 ; free physical = 28905 ; free virtual = 85325
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2025.699 ; gain = 514.320 ; free physical = 28905 ; free virtual = 85325
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2025.699 ; gain = 514.320 ; free physical = 28904 ; free virtual = 85324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2034.605 ; gain = 523.227 ; free physical = 28898 ; free virtual = 85320
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design testbench has an empty top module
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2103.480 ; gain = 592.102 ; free physical = 28739 ; free virtual = 85225
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2127.293 ; gain = 615.914 ; free physical = 28775 ; free virtual = 85203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2127.293 ; gain = 615.914 ; free physical = 28769 ; free virtual = 85197
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.105 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.113 ; gain = 780.727 ; free physical = 28555 ; free virtual = 84992
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2295.074 ; gain = 0.000 ; free physical = 28543 ; free virtual = 84980
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2381.699 ; gain = 0.000 ; free physical = 28567 ; free virtual = 85004
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4b9f2ba5
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.734 ; gain = 870.355 ; free physical = 28563 ; free virtual = 85001
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1534.998; main = 1530.276; forked = 247.353
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3128.914; main = 2381.703; forked = 962.617
+INFO: [Common 17-1381] The checkpoint '/home/filthyfil/FPGA/multifunction_barrel_shifter/multifunction_barrel_shifter.runs/synth_1/testbench.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file testbench_utilization_synth.rpt -pb testbench_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  2 23:32:26 2025...

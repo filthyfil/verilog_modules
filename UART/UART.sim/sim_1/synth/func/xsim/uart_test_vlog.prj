@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Applications/Vivado/2025.1/data/rsb/busdef" \
+"uart_test_func_synth.v" \
+
+# Do not sort compile order
+nosort
