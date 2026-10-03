@@ -1,7 +1,0 @@
-Running: xsim.dir/dut_sq_wave_behav/xsimk -simmode gui -wdb dut_sq_wave_behav.wdb -simrunnum 0 -socket 35051
-Design successfully loaded
-Design Loading Memory Usage: 179056 KB (Peak: 179112 KB)
-Design Loading CPU Usage: 1190 ms
-Simulation completed
-Simulation Memory Usage: 261052 KB (Peak: 318324 KB)
-Simulation CPU Usage: 1210 ms

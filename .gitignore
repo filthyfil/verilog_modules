@@ -1,0 +1,26 @@
+# Vivado generated directories (regenerated from .xpr + .srcs)
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.gen/
+*.ip_user_files/
+*.Xil/
+.Xil/
+
+# Incremental synthesis checkpoints
+*.srcs/utils_1/
+*.dcp
+
+# Vivado logs / journals / backups
+*.jou
+*.log
+*.str
+*.backup.*
+vivado_pid*.zip
+webtalk*
+
+# Simulation outputs
+*.vcd
+*.wdb
+xsim.dir/
