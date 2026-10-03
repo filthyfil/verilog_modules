@@ -34,8 +34,8 @@ module vga_sync (
     localparam HB = 16; // h. back (right) border
     localparam HR = 96; // h. retrace
     localparam VD = 480; // vertical display area
-    localparam VF = 10; // v. front (top) border
-    localparam VB = 33; // v. back (bottom) border
+    localparam VF = 33; // v. front (top) border
+    localparam VB = 10; // v. back (bottom) border
     localparam VR = 2; // v. retrace
     
     // mod-4 counter

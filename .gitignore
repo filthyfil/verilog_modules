@@ -24,3 +24,10 @@ webtalk*
 *.vcd
 *.wdb
 xsim.dir/
+
+# Icarus simulation outputs
+**/sim/out*/
+
+# editor / python caches
+*.swp
+__pycache__/

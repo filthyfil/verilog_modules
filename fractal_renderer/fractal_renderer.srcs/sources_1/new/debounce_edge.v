@@ -37,8 +37,11 @@ module debounce_edge #(
     wire [N-1:0] q_next = q_reg + 1;
     wire m_tick = (q_reg == 0);
 
-    always @(posedge clk)
-        q_reg <= q_next;
+    always @(posedge clk, posedge reset)
+        if (reset)
+            q_reg <= 0;
+        else
+            q_reg <= q_next;
 
     //------------------------------------------------------
     // Debounce FSM (cleaned-up version)
@@ -115,8 +118,11 @@ module debounce_edge #(
     //------------------------------------------------------
     reg db_level_d;
 
-    always @(posedge clk)
-        db_level_d <= db_level;
+    always @(posedge clk, posedge reset)
+        if (reset)
+            db_level_d <= 1'b0;
+        else
+            db_level_d <= db_level;
 
     assign db_tick = db_level & ~db_level_d;
 

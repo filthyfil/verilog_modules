@@ -4,7 +4,7 @@
 // Engineer: 
 // 
 // Create Date: 11/10/2025 06:40:16 PM
-// Design Name: dual-port RAM with synchronous read
+// Design Name: simple dual-port RAM (1 write port, 1 synchronous read port)
 // Module Name: memory
 // Project Name: 
 // Target Devices: 
@@ -21,28 +21,30 @@
 
 
 module memory #(
-    parameter ADDR_WIDTH = 16,
-              DATA_WIDTH = 8
+    parameter ADDR_WIDTH = 17,
+              DATA_WIDTH = 8,
+              DEPTH = 320*240
     ) (
     // I/O
     input wire clk,
     input wire we,
     input wire [ADDR_WIDTH-1:0] addr_a, addr_b,
     input wire [DATA_WIDTH-1:0] din_a,
-    output wire [DATA_WIDTH-1:0] dout_b
+    output reg [DATA_WIDTH-1:0] dout_b
     );
     
     // signal declaration
-    reg [DATA_WIDTH-1:0] ram [2**ADDR_WIDTH-1:0];
-    reg [ADDR_WIDTH-1:0] addr_a_reg, addr_b_reg;
+    reg [DATA_WIDTH-1:0] ram [0:DEPTH-1];
     
     // body
+    // write port (compute side)
     always @(posedge clk) begin
-        if (we) // write op
+        if (we)
             ram[addr_a] <= din_a;
-        addr_a_reg <= addr_a;
-        addr_b_reg <= addr_b;
     end
-    // read only on display bus    
-    assign dout_b = ram[addr_b_reg];
+    
+    // read port (display side), 1-cycle latency
+    always @(posedge clk) begin
+        dout_b <= ram[addr_b];
+    end
 endmodule
