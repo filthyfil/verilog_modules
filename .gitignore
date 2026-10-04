@@ -27,6 +27,7 @@ xsim.dir/
 
 # Icarus simulation outputs
 **/sim/out*/
+**/test/out/
 
 # editor / python caches
 *.swp
